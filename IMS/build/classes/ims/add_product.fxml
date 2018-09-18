@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="808.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="ims.Add_ProductController">
+   <children>
+      <Pane layoutX="9.0" layoutY="10.0" prefHeight="530.0" prefWidth="787.0" style="-fx-border-color: black;">
+         <children>
+            <Label layoutX="75.0" layoutY="73.0" text="Add Product">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="154.0" prefHeight="17.0" prefWidth="38.0" text="ID" />
+            <Label layoutX="12.0" layoutY="191.0" prefHeight="17.0" prefWidth="38.0" text="Name" />
+            <Label layoutX="12.0" layoutY="226.0" prefHeight="17.0" prefWidth="38.0" text="Inv" />
+            <Label layoutX="12.0" layoutY="260.0" prefHeight="17.0" prefWidth="38.0" text="Price" />
+            <Label layoutX="12.0" layoutY="294.0" prefHeight="17.0" prefWidth="38.0" text="Max" />
+            <Label layoutX="161.0" layoutY="295.0" prefHeight="17.0" prefWidth="38.0" text="Min" />
+            <Label layoutX="420.0" layoutY="38.0" text="Search:">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Label>
+            <Button fx:id="add" onAction="#addAssociatedPart" layoutX="655.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Add" />
+            <Button fx:id="delete" onAction="#deleteAssociatedPart" layoutX="655.0" layoutY="432.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Delete" />
+            <Button fx:id="save" onAction="#save_product" layoutX="583.0" layoutY="485.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Save" />
+            <Button fx:id="cancel" onAction="#show_home_page" layoutX="654.0" layoutY="485.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Cancel" />
+            <TextField fx:id="id_field" editable="false" layoutX="75.0" layoutY="150.0" promptText="Auto Gen - Disabled" />
+            <TextField fx:id="name_field" layoutX="75.0" layoutY="187.0" />
+            <TextField fx:id="inv_field" layoutX="75.0" layoutY="222.0" prefHeight="25.0" prefWidth="67.0" />
+            <TextField fx:id="price_field" layoutX="75.0" layoutY="256.0" prefHeight="25.0" prefWidth="67.0" />
+            <TextField fx:id="max_field" layoutX="75.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" />
+            <TextField fx:id="min_field" layoutX="208.0" layoutY="290.0" prefHeight="25.0" prefWidth="67.0" />
+            <TextField fx:id="search_field" layoutX="493.0" layoutY="40.0" promptText="Search by name" />
+            <TableView fx:id="t_parts_all" layoutX="297.0" layoutY="90.0" prefHeight="144.0" prefWidth="428.0">
+              <columns>
+                <TableColumn fx:id="tc_partsID_all" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="tc_partsName_all" prefWidth="123.0" text="Part Name" />
+                  <TableColumn fx:id="tc_partsIL_all" prefWidth="114.0" text="Inventory Level" />
+                  <TableColumn fx:id="tc_partsPPU_all" prefWidth="115.0" text="Price Per Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="t_parts_asso" layoutX="297.0" layoutY="280.0" prefHeight="144.0" prefWidth="428.0">
+               <columns>
+                  <TableColumn fx:id="tc_partsID_asso" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="tc_partsName_asso" prefWidth="123.0" text="Part Name" />
+                  <TableColumn fx:id="tc_partsIL_asso" prefWidth="114.0" text="Inventory Level" />
+                  <TableColumn fx:id="tc_partsPPU_asso" prefWidth="115.0" text="Price Per Unit" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
